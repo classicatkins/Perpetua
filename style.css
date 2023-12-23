@@ -181,13 +181,18 @@ footer {
   --color-gray-7: #1B1B1B;
 }
 
-nav ul li a .fa-bars {
+nav > .fa-bars {
   display: none;
 }
 
 @media screen and (max-width: 600px) {
   nav > ul > li:not(.dropdown) {
       display: none;
+  }
+
+  nav > .fa-bars {
+    display: block;
+    padding-right: 2rem;
   }
 
   .dropdown > a .fa-bars {

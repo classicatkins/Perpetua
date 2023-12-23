@@ -895,6 +895,8 @@ parcelHelpers.export(exports, "About", ()=>(0, _aboutDefault.default));
 parcelHelpers.export(exports, "Home", ()=>(0, _homeDefault.default));
 parcelHelpers.export(exports, "Contact", ()=>(0, _contactDefault.default));
 parcelHelpers.export(exports, "Habits", ()=>(0, _habitsDefault.default));
+parcelHelpers.export(exports, "Settings", ()=>(0, _settingsDefault.default));
+parcelHelpers.export(exports, "Stats", ()=>(0, _statsDefault.default));
 parcelHelpers.export(exports, "Viewnotfound", ()=>(0, _viewnotfoundDefault.default));
 var _about = require("./About");
 var _aboutDefault = parcelHelpers.interopDefault(_about);
@@ -904,10 +906,14 @@ var _contact = require("./Contact");
 var _contactDefault = parcelHelpers.interopDefault(_contact);
 var _habits = require("./Habits");
 var _habitsDefault = parcelHelpers.interopDefault(_habits);
+var _settings = require("./Settings");
+var _settingsDefault = parcelHelpers.interopDefault(_settings);
+var _stats = require("./Stats");
+var _statsDefault = parcelHelpers.interopDefault(_stats);
 var _viewnotfound = require("../Viewnotfound");
 var _viewnotfoundDefault = parcelHelpers.interopDefault(_viewnotfound);
 
-},{"./Home":"d9WBP","../Viewnotfound":"iDrEG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./About":"4FEBc","./Contact":"Fyyq5","./Habits":"1jUPz"}],"d9WBP":[function(require,module,exports) {
+},{"./Home":"d9WBP","../Viewnotfound":"iDrEG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./About":"4FEBc","./Contact":"Fyyq5","./Habits":"1jUPz","./Settings":"BSnCp","./Stats":"fSOl2"}],"d9WBP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _htmlLiteral = require("html-literal");
@@ -1213,6 +1219,128 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
   </section>
 `;
 
+},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"BSnCp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _htmlLiteral = require("html-literal");
+var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
+exports.default = ()=>(0, _htmlLiteralDefault.default)`
+<body>
+    <div class="container">
+        <h2>Settings</h2>
+        <form id="settingsForm">
+
+            <div class="section">
+                <h3>Personal Information</h3>
+                <div class="setting">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName">
+                </div>
+                <div class="setting">
+                  <label for="lastName">Last  Name:</label>
+                  <input type="text" id="lastName" name="lastName">
+                </div>
+                <div class="setting">
+                  <label for="phoneNumber">Phone Number:</label>
+                  <input type="text" id="phoneNumber" name="phoneNumber">
+                </div>
+                <div class="setting">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Notifications</h3>
+                <div class="setting">
+                    <label for="emailNotifications">Email Notifications:</label>
+                    <select id="emailNotifications" name="emailNotifications">
+                        <option value="enabled">Enabled</option>
+                        <option value="disabled">Disabled</option>
+                    </select>
+                </div>
+                <div class="setting">
+                    <label for="smsNotifications">SMS Notifications:</label>
+                    <select id="smsNotifications" name="smsNotifications">
+                        <option value="enabled">Enabled</option>
+                        <option value="disabled">Disabled</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Other</h3>
+                <div class="setting">
+                    <label for="language">Language:</label>
+                    <select id="language" name="language">
+                        <option value="english">English</option>
+                        <option value="spanish">Spanish</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button type="submit" class="submit-button">Save Changes</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('settingsForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Handle form submission logic here
+            alert('Settings saved!');
+        });
+    </script>
+</body>
+`;
+
+},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fSOl2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _htmlLiteral = require("html-literal");
+var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
+exports.default = ()=>(0, _htmlLiteralDefault.default)`
+<body>
+    <div class="container">
+        <div class="grid">
+            <div class="graph-box">Graph 1 - chart.js - use</div>
+            <div class="graph-box">Graph 2</div>
+            <div class="graph-box">Graph 3</div>
+            <div class="graph-box">Graph 4</div>
+        </div>
+        <div class="menu-box">
+          <div class="header-container">
+            <h3>Graphs</h3>
+          <ul>
+              <li>Menu Item 1.1</li>
+              <li>Menu Item 1.2</li>
+              <li>Menu Item 1.3</li>
+          </ul>
+          </div>
+          <div class="header-container">
+            <h3>Habits</h3>
+          <ul>
+              <li>Menu Item 2.1</li>
+              <li>Menu Item 2.2</li>
+          </ul>
+          </div>
+          <div class="header-container">
+            <h3>Catagories</h3>
+          <ul>
+              <li>Menu Item 3.1</li>
+              <li>Menu Item 3.2</li>
+              <li>Menu Item 3.3</li>
+              <li>Menu Item 3.4</li>
+          </ul>
+          </div>
+      </div>
+
+    </div>
+</body>
+`;
+
 },{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2qGmX":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -1231,6 +1359,8 @@ exports.default = (links)=>(0, _htmlLiteralDefault.default)`
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "About", ()=>(0, _aboutDefault.default));
+parcelHelpers.export(exports, "Settings", ()=>(0, _settingsDefault.default));
+parcelHelpers.export(exports, "Stats", ()=>(0, _statsDefault.default));
 parcelHelpers.export(exports, "Home", ()=>(0, _homeDefault.default));
 parcelHelpers.export(exports, "Contact", ()=>(0, _contactDefault.default));
 parcelHelpers.export(exports, "Habits", ()=>(0, _habitsDefault.default));
@@ -1238,6 +1368,10 @@ parcelHelpers.export(exports, "Viewnotfound", ()=>(0, _viewnotfoundDefault.defau
 parcelHelpers.export(exports, "Links", ()=>(0, _linksDefault.default));
 var _about = require("./About");
 var _aboutDefault = parcelHelpers.interopDefault(_about);
+var _settings = require("./Settings");
+var _settingsDefault = parcelHelpers.interopDefault(_settings);
+var _stats = require("./Stats");
+var _statsDefault = parcelHelpers.interopDefault(_stats);
 var _home = require("./Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
 var _contact = require("./Contact");
@@ -1249,7 +1383,7 @@ var _viewnotfoundDefault = parcelHelpers.interopDefault(_viewnotfound);
 var _links = require("./Links");
 var _linksDefault = parcelHelpers.interopDefault(_links);
 
-},{"./Home":"60R7n","./Viewnotfound":"cSOMF","./Links":"jDBjl","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./About":"3OUOl","./Contact":"hWwek","./Habits":"ihjeP"}],"60R7n":[function(require,module,exports) {
+},{"./Home":"60R7n","./Viewnotfound":"cSOMF","./Links":"jDBjl","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./About":"3OUOl","./Contact":"hWwek","./Habits":"ihjeP","./Settings":"eqSye","./Stats":"3bAKh"}],"60R7n":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 exports.default = {
@@ -1274,6 +1408,14 @@ exports.default = [
         text: "Home"
     },
     {
+        title: "Habits",
+        text: "Habits"
+    },
+    {
+        title: "Stats",
+        text: "Stats"
+    },
+    {
         title: "About",
         text: "About"
     },
@@ -1282,8 +1424,8 @@ exports.default = [
         text: "Contact"
     },
     {
-        title: "Habits",
-        text: "Habits"
+        title: "Settings",
+        text: "Settings"
     }
 ];
 
@@ -1309,6 +1451,22 @@ parcelHelpers.defineInteropFlag(exports);
 exports.default = {
     header: "My Habits Page",
     view: "Habits"
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eqSye":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+    header: "My Settings Page",
+    view: "Settings"
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3bAKh":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+    header: "My Stats Page",
+    view: "Stats"
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fuSlc":[function(require,module,exports) {

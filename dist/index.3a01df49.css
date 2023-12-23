@@ -27,13 +27,18 @@
   font-family: Agrandir, sans-serif;
 }
 
-nav ul li a .fa-bars {
+nav > .fa-bars {
   display: none;
 }
 
 @media screen and (width <= 600px) {
   nav > ul > li:not(.dropdown) {
     display: none;
+  }
+
+  nav > .fa-bars {
+    padding-right: 2rem;
+    display: block;
   }
 
   .dropdown > a .fa-bars {
