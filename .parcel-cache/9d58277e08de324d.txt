@@ -1,4 +1,4 @@
-13447
+13449
 81C:\Users\u\code\SavvyCoders\Perpetua\node_modules\caniuse-lite\data\regions\KW.js133477579463388253 0
 71C:\Users\u\code\SavvyCoders\Perpetua\node_modules\nice-try\package.json133477579483833324 0
 78C:\Users\u\code\SavvyCoders\Perpetua\node_modules\strip-json-comments\index.js133477579533609828 0
@@ -29,7 +29,7 @@
 74C:\Users\u\code\SavvyCoders\Perpetua\node_modules\table\dist\index.js.flow133477579455022014 0
 78C:\Users\u\code\SavvyCoders\Perpetua\node_modules\brace-expansion\package.json133477579482473321 0
 55C:\Users\u\code\SavvyCoders\Perpetua\node_modules\chalk133477579481963327 1
-51C:\Users\u\code\SavvyCoders\Perpetua\store\Links.js133477649031706571 0
+51C:\Users\u\code\SavvyCoders\Perpetua\store\Links.js133477710443884484 0
 86C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\_esm2015\webSocket\index.js.map133477579507752886 0
 92C:\Users\u\code\SavvyCoders\Perpetua\node_modules\table\node_modules\is-fullwidth-code-point133477579454672014 1
 95C:\Users\u\code\SavvyCoders\Perpetua\node_modules\caniuse-lite\data\features\canvas-blending.js133477579465758244 0
@@ -67,7 +67,7 @@
 88C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\src\internal\symbol\observable.ts133477579524469793 0
 75C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\add\operator\find.js133477579522229785 0
 74C:\Users\u\code\SavvyCoders\Perpetua\node_modules\cosmiconfig\dist\util.js133477579436660041 0
-41C:\Users\u\code\SavvyCoders\Perpetua\dist133477676554483472 1
+41C:\Users\u\code\SavvyCoders\Perpetua\dist133477742089406110 1
 81C:\Users\u\code\SavvyCoders\Perpetua\node_modules\caniuse-lite\data\regions\NF.js133477579463928245 0
 117C:\Users\u\code\SavvyCoders\Perpetua\node_modules\css-select\node_modules\entities\lib\generated\decode-data-xml.d.ts133477579377358576 0
 78C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\src\observable\throw.ts133477579528969793 0
@@ -79,7 +79,7 @@
 92C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\src\internal\operators\materialize.ts133477579525729795 0
 63C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rimraf\bin.js133477579456672019 0
 87C:\Users\u\code\SavvyCoders\Perpetua\node_modules\eslint\lib\shared\config-validator.js133477579447782024 0
-50C:\Users\u\code\SavvyCoders\Perpetua\store\Home.js133477579536119810 0
+50C:\Users\u\code\SavvyCoders\Perpetua\store\Home.js133477708937591154 0
 64C:\Users\u\code\SavvyCoders\Perpetua\node_modules\lodash\uniq.js133477579423890016 0
 62C:\Users\u\code\SavvyCoders\Perpetua\node_modules\html-literal133477579491881245 1
 79C:\Users\u\code\SavvyCoders\Perpetua\node_modules\utility-types\dist\index.d.ts133477579460922016 0
@@ -93,7 +93,7 @@
 72C:\Users\u\code\SavvyCoders\Perpetua\node_modules\timsort\src\timsort.js133477579454022013 0
 84C:\Users\u\code\SavvyCoders\Perpetua\node_modules\node-addon-api\tools\check-napi.js133477579492130546 0
 67C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\src\operator133477579530609797 1
-47C:\Users\u\code\SavvyCoders\Perpetua\index.html133477610548970518 0
+47C:\Users\u\code\SavvyCoders\Perpetua\index.html133477733823806529 0
 76C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\observable\throw.d.ts133477579502132902 0
 96C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\_esm5\internal\SubjectSubscription.js.map133477579496462889 0
 121C:\Users\u\code\SavvyCoders\Perpetua\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\cleanupListOfValues.js133477579402508567 0
@@ -105,7 +105,7 @@
 64C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rimraf\LICENSE133477579456632019 0
 114C:\Users\u\code\SavvyCoders\Perpetua\node_modules\@parcel\transformer-postcss\node_modules\semver\classes\range.js133477579401708601 0
 86C:\Users\u\code\SavvyCoders\Perpetua\node_modules\fast-json-stable-stringify\benchmark133477579532589785 1
-46C:\Users\u\code\SavvyCoders\Perpetua\style.css133477676550009099 0
+46C:\Users\u\code\SavvyCoders\Perpetua\style.css133477742082148832 0
 86C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\internal\operators\groupBy.d.ts133477579513452894 0
 87C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\_esm5\internal\Subscriber.js.map133477579496422892 0
 75C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\operator\sample.d.ts133477579504912895 0
@@ -4256,7 +4256,7 @@
 94C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\_esm2015\internal\operators\debounce.js133477579510382891 0
 98C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\_esm2015\internal\operators\debounce.js.map133477579511112888 0
 87C:\Users\u\code\SavvyCoders\Perpetua\node_modules\csso\node_modules\css-tree\lib\walker133477579386522856 1
-63C:\Users\u\code\SavvyCoders\Perpetua\dist\index.3d214d75.js.map133477676554464638 0
+63C:\Users\u\code\SavvyCoders\Perpetua\dist\index.3d214d75.js.map133477741987562784 0
 75C:\Users\u\code\SavvyCoders\Perpetua\node_modules\@parcel\core\lib\requests133477579393090503 1
 100C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\_esm2015\internal\operators\defaultIfEmpty.js133477579511202896 0
 123C:\Users\u\code\SavvyCoders\Perpetua\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\removeEmptyContainers.js133477579402828724 0
@@ -5426,6 +5426,7 @@
 87C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\src\internal\observable\never.ts133477579525579784 0
 87C:\Users\u\code\SavvyCoders\Perpetua\node_modules\node-addon-api\tools\eslint-format.js133477579492169266 0
 89C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\internal\observable\fromArray.d.ts133477579518792891 0
+68C:\Users\u\code\SavvyCoders\Perpetua\dist\Perpetua Logo.9ad38d8d.png133477741986092788 0
 116C:\Users\u\code\SavvyCoders\Perpetua\node_modules\ansi-escapes\node_modules\type-fest\source\conditional-except.d.ts133477579446132053 0
 84C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\src\internal\observable\of.ts133477579525369787 0
 99C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\src\internal\observable\onErrorResumeNext.ts133477579525269798 0
@@ -7096,13 +7097,13 @@
 87C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\add\operator\bufferToggle.js.map133477579521739794 0
 85C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\internal\observable\zip.js.map133477579519482887 0
 86C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\internal\observable\dom\ajax.js133477579519312889 0
-64C:\Users\u\code\SavvyCoders\Perpetua\dist\index.3a01df49.css.map133477676553327035 0
+64C:\Users\u\code\SavvyCoders\Perpetua\dist\index.3a01df49.css.map133477742089391457 0
 100C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\internal\observable\dom\AjaxObservable.js.map133477579519212905 0
 104C:\Users\u\code\SavvyCoders\Perpetua\node_modules\dom-serializer\node_modules\entities\lib\maps\xml.json133477579438495769 0
 99C:\Users\u\code\SavvyCoders\Perpetua\node_modules\@parcel\package-manager\src\NodePackageManager.js133477579401058227 0
 99C:\Users\u\code\SavvyCoders\Perpetua\node_modules\css-select\node_modules\domutils\lib\esm\feeds.js133477579376898577 0
 98C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\internal\observable\dom\AjaxObservable.d.ts133477579519182895 0
-60C:\Users\u\code\SavvyCoders\Perpetua\dist\index.3a01df49.css133477676553226263 0
+60C:\Users\u\code\SavvyCoders\Perpetua\dist\index.3a01df49.css133477742089336256 0
 96C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\internal\observable\dom\AjaxObservable.js133477579519302893 0
 87C:\Users\u\code\SavvyCoders\Perpetua\node_modules\eslint\lib\rules\no-useless-return.js133477579449442026 0
 91C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\internal\observable\dom\fetch.js.map133477579519222891 0
@@ -7534,7 +7535,7 @@
 90C:\Users\u\code\SavvyCoders\Perpetua\node_modules\rxjs\add\observable\dom\webSocket.js.map133477579520532901 0
 86C:\Users\u\code\SavvyCoders\Perpetua\node_modules\ordered-binary\assets\powers-dre.png133477579482653256 0
 76C:\Users\u\code\SavvyCoders\Perpetua\node_modules\lmdb\util\RangeIterable.js133477579457182021 0
-64C:\Users\u\code\SavvyCoders\Perpetua\dist\index.043bda77.css.map133477676554413676 0
+64C:\Users\u\code\SavvyCoders\Perpetua\dist\index.043bda77.css.map133477741987492769 0
 68C:\Users\u\code\SavvyCoders\Perpetua\node_modules\run-async\index.js133477579533359801 0
 87C:\Users\u\code\SavvyCoders\Perpetua\node_modules\posthtml\node_modules\posthtml-parser133477579388640442 1
 71C:\Users\u\code\SavvyCoders\Perpetua\node_modules\csso\cjs\compress.cjs133477579380278579 0
@@ -7589,7 +7590,7 @@
 102C:\Users\u\code\SavvyCoders\Perpetua\node_modules\eslint\lib\cli-engine\config-array\ignore-pattern.js133477579452972026 0
 71C:\Users\u\code\SavvyCoders\Perpetua\node_modules\punycode\package.json133477579456732022 0
 74C:\Users\u\code\SavvyCoders\Perpetua\node_modules\punycode\punycode.es6.js133477579456752024 0
-63C:\Users\u\code\SavvyCoders\Perpetua\dist\oops-404.1e5d8f24.jpg133477676553266533 0
+63C:\Users\u\code\SavvyCoders\Perpetua\dist\oops-404.1e5d8f24.jpg133477741986132787 0
 76C:\Users\u\code\SavvyCoders\Perpetua\node_modules\proxy-from-env\.travis.yml133477579374948579 0
 66C:\Users\u\code\SavvyCoders\Perpetua\node_modules\path-key\license133477579453902015 0
 77C:\Users\u\code\SavvyCoders\Perpetua\node_modules\proxy-from-env\package.json133477579374928578 0
@@ -8353,7 +8354,7 @@
 77C:\Users\u\code\SavvyCoders\Perpetua\node_modules\lodash\sortedLastIndexOf.js133477579427480038 0
 90C:\Users\u\code\SavvyCoders\Perpetua\node_modules\inquirer\node_modules\strip-ansi\license133477579535259783 0
 100C:\Users\u\code\SavvyCoders\Perpetua\node_modules\eslint\lib\cli-engine\config-array\config-array.js133477579453022016 0
-54C:\Users\u\code\SavvyCoders\Perpetua\components\Nav.js133477579372543812 0
+54C:\Users\u\code\SavvyCoders\Perpetua\components\Nav.js133477739714605388 0
 110C:\Users\u\code\SavvyCoders\Perpetua\node_modules\@parcel\node-resolver-core\node_modules\semver\ranges\gtr.js133477579417213409 0
 70C:\Users\u\code\SavvyCoders\Perpetua\node_modules\lodash\sortedUniq.js133477579428600023 0
 65C:\Users\u\code\SavvyCoders\Perpetua\node_modules\lodash\split.js133477579426240026 0
@@ -12344,7 +12345,7 @@
 115C:\Users\u\code\SavvyCoders\Perpetua\node_modules\@parcel\transformer-html\node_modules\semver\functions\compare.js133477579416613412 0
 112C:\Users\u\code\SavvyCoders\Perpetua\node_modules\@parcel\transformer-html\node_modules\semver\functions\diff.js133477579416633409 0
 110C:\Users\u\code\SavvyCoders\Perpetua\node_modules\@parcel\transformer-html\node_modules\semver\functions\eq.js133477579416643409 0
-62C:\Users\u\code\SavvyCoders\Perpetua\dist\favicon.0e5b1046.svg133477676553973691 0
+62C:\Users\u\code\SavvyCoders\Perpetua\dist\favicon.0e5b1046.svg133477741987312780 0
 110C:\Users\u\code\SavvyCoders\Perpetua\node_modules\@parcel\transformer-html\node_modules\semver\functions\gt.js133477579416653414 0
 111C:\Users\u\code\SavvyCoders\Perpetua\node_modules\@parcel\transformer-html\node_modules\semver\functions\inc.js133477579416673422 0
 114C:\Users\u\code\SavvyCoders\Perpetua\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\dist\csstree.js133477579408548648 0
@@ -13424,9 +13425,10 @@
 61C:\Users\u\code\SavvyCoders\Perpetua\dist\bio.8a88f4a4.js.map133477579372881378 0
 50C:\Users\u\code\SavvyCoders\Perpetua\dist\bio.html133477579372790576 0
 70C:\Users\u\code\SavvyCoders\Perpetua\dist\dog-with-flower.f784c242.jpg133477590705192672 0
-60C:\Users\u\code\SavvyCoders\Perpetua\dist\index.043bda77.css133477676554334912 0
-59C:\Users\u\code\SavvyCoders\Perpetua\dist\index.3d214d75.js133477676554383663 0
-52C:\Users\u\code\SavvyCoders\Perpetua\dist\index.html133477676553226263 0
+60C:\Users\u\code\SavvyCoders\Perpetua\dist\index.043bda77.css133477741987412777 0
+59C:\Users\u\code\SavvyCoders\Perpetua\dist\index.3d214d75.js133477741987452816 0
+52C:\Users\u\code\SavvyCoders\Perpetua\dist\index.html133477688055638392 0
+69C:\Users\u\code\SavvyCoders\Perpetua\dist\melissa-circle.0a61f46c.png133477741987452816 0
 69C:\Users\u\code\SavvyCoders\Perpetua\dist\Nov2023ClassSPA.3464ddca.js133477579372941364 0
 59C:\Users\u\code\SavvyCoders\Perpetua\dist\order.d7dc69fe.js133477579372701270 0
 63C:\Users\u\code\SavvyCoders\Perpetua\dist\order.d7dc69fe.js.map133477579372820859 0
@@ -13435,10 +13437,10 @@
 63C:\Users\u\code\SavvyCoders\Perpetua\dist\pizza.deb3b204.js.map133477579372860823 0
 56C:\Users\u\code\SavvyCoders\Perpetua\components\index.js133477632989185478 0
 53C:\Users\u\code\SavvyCoders\Perpetua\components\views133477649571843541 1
-62C:\Users\u\code\SavvyCoders\Perpetua\components\views\About.js133477605857956086 0
+62C:\Users\u\code\SavvyCoders\Perpetua\components\views\About.js133477738299217713 0
 62C:\Users\u\code\SavvyCoders\Perpetua\components\views\index.js133477648220091815 0
 65C:\Users\u\code\SavvyCoders\Perpetua\components\views\Settings.js133477646444151081 0
-62C:\Users\u\code\SavvyCoders\Perpetua\components\views\Stats.js133477660759210248 0
+62C:\Users\u\code\SavvyCoders\Perpetua\components\views\Stats.js133477721624121007 0
 47C:\Users\u\code\SavvyCoders\Perpetua\assets\img133477602562794725 1
 67C:\Users\u\code\SavvyCoders\Perpetua\assets\img\dog-with-flower.jpg133477579372483850 0
 66C:\Users\u\code\SavvyCoders\Perpetua\assets\img\melissa-circle.png133474254337148067 0

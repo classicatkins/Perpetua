@@ -1005,6 +1005,10 @@ parcelHelpers.defineInteropFlag(exports);
 var _htmlLiteral = require("html-literal");
 var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
 //import dogPic from "../../assets/img/dog-with-flower.jpg";
+var _melissaCirclePng = require("../../assets/img/melissa-circle.png");
+var _melissaCirclePngDefault = parcelHelpers.interopDefault(_melissaCirclePng);
+var _perpetuaLogoPng = require("../../assets/img/Perpetua Logo.png");
+var _perpetuaLogoPngDefault = parcelHelpers.interopDefault(_perpetuaLogoPng);
 exports.default = ()=>(0, _htmlLiteralDefault.default)`
   <section id="about">
     <div class="container">
@@ -1012,7 +1016,7 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
         <h2>About Me</h2>
         <img
           class="img-about"
-          src="../assets/img/melissa-circle.png"
+          src="${0, _melissaCirclePngDefault.default}"
           alt="photo of melissa"
         />
         <p>
@@ -1056,7 +1060,7 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
         <h2>About Perpetua</h2>
         <img
           class="img-habit"
-          src="../assets/img/Perpetua Logo.png"
+          src="${0, _perpetuaLogoPngDefault.default}"
           alt="Perpetua Logo"
         />
         <p>
@@ -1084,7 +1088,13 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
   </section>
 `;
 
-},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Fyyq5":[function(require,module,exports) {
+},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../../assets/img/melissa-circle.png":"g7IOF","../../assets/img/Perpetua Logo.png":"lN7X1"}],"g7IOF":[function(require,module,exports) {
+module.exports = require("da4ec1b344248ef6").getBundleURL("UckoE") + "melissa-circle.0a61f46c.png" + "?" + Date.now();
+
+},{"da4ec1b344248ef6":"lgJ39"}],"lN7X1":[function(require,module,exports) {
+module.exports = require("50e71fbbe2ca505c").getBundleURL("UckoE") + "Perpetua Logo.9ad38d8d.png" + "?" + Date.now();
+
+},{"50e71fbbe2ca505c":"lgJ39"}],"Fyyq5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _htmlLiteral = require("html-literal");
@@ -1303,7 +1313,7 @@ var _htmlLiteral = require("html-literal");
 var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
 exports.default = ()=>(0, _htmlLiteralDefault.default)`
 <body>
-    <div class="container">
+    <div class="stats-container">
         <div class="grid">
             <div class="graph-box">Graph 1 - chart.js - use</div>
             <div class="graph-box">Graph 2</div>
@@ -1346,16 +1356,30 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _htmlLiteral = require("html-literal");
 var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
+var _faviconSvg = require("../assets/img/favicon.svg");
+var _faviconSvgDefault = parcelHelpers.interopDefault(_faviconSvg);
 exports.default = (links)=>(0, _htmlLiteralDefault.default)`
   <nav>
+    <ul>
+    <img src="${0, _faviconSvgDefault.default}" alt="Favicon" class="favicon">
+    <li><a href="/Home" title="Home" data-navigo>Perpetua</a></li>
+    </ul>
     <i class="fas fa-bars"></i>
     <ul class="hidden--mobile nav-links">
-      ${links.map((link)=>`<li><a href="/${link.title}" title="${link.title}" data-navigo>${link.text}</a></li>`).join("")}
+      ${links.map((link)=>{
+        if (link.title === "Settings") // If link.title is "Settings", replace with the gear icon
+        return `<li><a href="/${link.title}" title="${link.title}" data-navigo><i class="fa-solid fa-gear"></i></a></li>`;
+        else // For other link titles, use the default behavior
+        return `<li><a href="/${link.title}" title="${link.title}" data-navigo>${link.text}</a></li>`;
+    }).join("")}
     </ul>
   </nav>
 `;
 
-},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"71t6G":[function(require,module,exports) {
+},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../assets/img/favicon.svg":"cxWmi"}],"cxWmi":[function(require,module,exports) {
+module.exports = require("8f225a36c42463eb").getBundleURL("UckoE") + "favicon.0e5b1046.svg" + "?" + Date.now();
+
+},{"8f225a36c42463eb":"lgJ39"}],"71t6G":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "About", ()=>(0, _aboutDefault.default));
@@ -1405,7 +1429,7 @@ parcelHelpers.defineInteropFlag(exports);
 exports.default = [
     {
         title: "Home",
-        text: "Home"
+        text: "Perpetua"
     },
     {
         title: "Habits",

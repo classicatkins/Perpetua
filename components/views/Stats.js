@@ -2,7 +2,7 @@ import html from "html-literal";
 
 export default () => html`
 <body>
-    <div class="container">
+    <div class="stats-container">
         <div class="grid">
             <div class="graph-box">Graph 1 - chart.js - use</div>
             <div class="graph-box">Graph 2</div>
