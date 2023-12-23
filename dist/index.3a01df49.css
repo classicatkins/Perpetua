@@ -27,16 +27,20 @@
   font-family: Agrandir, sans-serif;
 }
 
-nav > .fa-bars {
+.fa-bars, .fa-bars:before, .fa-bars:after {
   display: none;
 }
 
+.nav-perpetua {
+  color: red;
+}
+
 @media screen and (width <= 600px) {
-  nav > ul > li:not(.dropdown) {
+  .hidden--mobile {
     display: none;
   }
 
-  nav > .fa-bars {
+  .fa-bars:before, .fa-bars:after {
     padding-right: 2rem;
     display: block;
   }
@@ -117,13 +121,22 @@ header {
   height: 1rem;
 }
 
+.nav-left {
+  text-align: left;
+}
+
+.nav-right {
+  text-align: right;
+}
+
 nav {
   color: #fff;
-  text-align: right;
   background-color: #220c0c;
+  justify-content: space-between;
   padding: 10px 0;
   font-family: Quicksand, sans-serif;
   font-weight: 700;
+  display: flex;
 }
 
 nav ul {
@@ -169,7 +182,7 @@ footer {
 }
 
 .favicon {
-  height: 1.25rem;
+  height: 1.75rem;
 }
 
 .grid {
