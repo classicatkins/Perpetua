@@ -575,7 +575,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"bB7Pu":[function(require,module,exports) {
-// import { Header, Nav, Main, Footer } from "./components";
+// Assuming these components are defined in your project
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _components = require("./components");
 var _store = require("./store");
@@ -587,49 +587,56 @@ var _axiosDefault = parcelHelpers.interopDefault(_axios);
 const router = new (0, _navigoDefault.default)("/");
 function render(state = _store.Home) {
     document.querySelector("#root").innerHTML = `
-    ${(0, _components.Nav)(_store.Links)}
-    ${(0, _components.Main)(state)}
-    ${(0, _components.Footer)()}
-  `;
+        ${(0, _components.Nav)(_store.Links)}
+        ${(0, _components.Main)(state)}
+        ${(0, _components.Footer)()}
+    `;
     router.updatePageLinks();
     afterRender();
 }
 function afterRender() {
-    // add menu toggle to bars icon in nav bar
     document.querySelector(".fa-bars").addEventListener("click", ()=>{
         document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+    });
+    setupPixelaEventListeners();
+}
+function setupPixelaEventListeners() {
+    const createUserButton = document.getElementById("createUserButton");
+    if (createUserButton) createUserButton.addEventListener("click", ()=>{
+        createUser("classicatkins", "token"); // Replace 'username' and 'token' with actual values
+    });
+// Here you can add more event listeners for other Pixela API actions if needed
+// For example:
+// const createGraphButton = document.getElementById("createGraphButton");
+// if (createGraphButton) {
+//     createGraphButton.addEventListener("click", () => {
+//         createGraph("username", "token", "graphId", ...); // Replace with actual values and implement createGraph function
+//     });
+// }
+}
+function createUser(username, token) {
+    console.log("Creating user:", username, token);
+    // Implement the Axios POST request to create a user
+    (0, _axiosDefault.default).post("https://pixe.la/v1/users", {
+        token: token,
+        username: username,
+        agreeTermsOfService: "yes",
+        notMinor: "yes"
+    }).then((response)=>{
+        console.log("User creation response:", response.data);
+    }).catch((error)=>{
+        console.error("Error creating user:", error);
     });
 }
 router.hooks({
     before: (done, params)=>{
         const view = params && params.data && params.data.view ? (0, _lodash.capitalize)(params.data.view) : "Home";
-        // Add a switch case statement to handle multiple routes
         switch(view){
             case "Home":
-                (0, _axiosDefault.default).get(`https://api.openweathermap.org/data/2.5/weather?appid=${"723e0986e0f98b33c0d046e7f38d272c"}&q=st%20louis`).then((response)=>{
-                    const kelvinToFahrenheit = (kelvinTemp)=>Math.round((kelvinTemp - 273.15) * 1.8 + 32);
-                    _store.Home.weather = {
-                        city: response.data.name,
-                        temp: kelvinToFahrenheit(response.data.main.temp),
-                        feelsLike: kelvinToFahrenheit(response.data.main.feels_like),
-                        description: response.data.weather[0].main
-                    };
-                    done();
-                }).catch((err)=>{
-                    console.log(err);
-                    done();
-                });
+                // Add any specific logic for the Home view
+                done();
                 break;
-            // Added in Lesson 7.1
-            case "Pizza":
-                (0, _axiosDefault.default).get(`${"https://sc-pizza-api.onrender.com"}/pizzas`).then((response)=>{
-                    _store.Pizza.pizzas = response.data;
-                    done();
-                }).catch((error)=>{
-                    console.log("It puked", error);
-                    done();
-                });
-                break;
+            // Implement other cases as needed
             default:
                 done();
         }
@@ -650,12 +657,8 @@ router.on({
         }
     }
 }).resolve();
-// render();
-// add menu toggle to bars icon in nav bar
-// document.querySelector(".fa-bars").addEventListener("click", () => {
-//   document.querySelector("nav > ul").classList.toggle("hidden--mobile");
-// });
-/* ${Header(state)} */ (0, _axiosDefault.default).get("https://api.openweathermap.org/data/2.5/weather?q=St.%20Louis&APPID=723e0986e0f98b33c0d046e7f38d272c");
+// Example Axios GET request
+(0, _axiosDefault.default).get("https://api.openweathermap.org/data/2.5/weather?q=St.%20Louis&APPID=723e0986e0f98b33c0d046e7f38d272c");
 
 },{"./components":"ePLYF","./store":"71t6G","navigo":"fuSlc","lodash":"3qBDj","axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ePLYF":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -925,6 +928,12 @@ exports.default = (state)=>(0, _htmlLiteralDefault.default)`
   <section id="jumbotron">
     <h2>SavvyCoders JavaScript Fullstack Bootcamp</h2>
     <a href="index.html">"Call to Action" "Button"</a>
+
+    <button id="createUserButton">Create User</button>
+    <button id="createGraphButton">Create Graph</button>
+    <button id="recordPixelButton">Record Pixel</button>
+    <button id="updatePixelButton">Update Pixel</button>
+    <button id="deletePixelButton">Delete Pixel</button>
   </section>
      <!-- <main>-->
 <!--        <section id="home">-->
