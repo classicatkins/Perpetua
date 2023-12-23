@@ -575,6 +575,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"bB7Pu":[function(require,module,exports) {
+// import { Header, Nav, Main, Footer } from "./components";
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _components = require("./components");
 var _store = require("./store");
@@ -586,7 +587,6 @@ var _axiosDefault = parcelHelpers.interopDefault(_axios);
 const router = new (0, _navigoDefault.default)("/");
 function render(state = _store.Home) {
     document.querySelector("#root").innerHTML = `
-    ${(0, _components.Header)(state)}
     ${(0, _components.Nav)(_store.Links)}
     ${(0, _components.Main)(state)}
     ${(0, _components.Footer)()}
@@ -606,7 +606,7 @@ router.hooks({
         // Add a switch case statement to handle multiple routes
         switch(view){
             case "Home":
-                (0, _axiosDefault.default).get(`https://api.openweathermap.org/data/2.5/weather?appid=${undefined}&q=st%20louis`).then((response)=>{
+                (0, _axiosDefault.default).get(`https://api.openweathermap.org/data/2.5/weather?appid=${"723e0986e0f98b33c0d046e7f38d272c"}&q=st%20louis`).then((response)=>{
                     const kelvinToFahrenheit = (kelvinTemp)=>Math.round((kelvinTemp - 273.15) * 1.8 + 32);
                     _store.Home.weather = {
                         city: response.data.name,
@@ -622,7 +622,7 @@ router.hooks({
                 break;
             // Added in Lesson 7.1
             case "Pizza":
-                (0, _axiosDefault.default).get(`${undefined}/pizzas`).then((response)=>{
+                (0, _axiosDefault.default).get(`${"https://sc-pizza-api.onrender.com"}/pizzas`).then((response)=>{
                     _store.Pizza.pizzas = response.data;
                     done();
                 }).catch((error)=>{
@@ -655,33 +655,31 @@ router.on({
 // document.querySelector(".fa-bars").addEventListener("click", () => {
 //   document.querySelector("nav > ul").classList.toggle("hidden--mobile");
 // });
-(0, _axiosDefault.default).get("https://api.openweathermap.org/data/2.5/weather?q=St.%20Louis&APPID=723e0986e0f98b33c0d046e7f38d272c");
+/* ${Header(state)} */ (0, _axiosDefault.default).get("https://api.openweathermap.org/data/2.5/weather?q=St.%20Louis&APPID=723e0986e0f98b33c0d046e7f38d272c");
 
 },{"./components":"ePLYF","./store":"71t6G","navigo":"fuSlc","lodash":"3qBDj","axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ePLYF":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "Footer", ()=>(0, _footerDefault.default));
-parcelHelpers.export(exports, "Header", ()=>(0, _headerDefault.default));
+// export { default as Header } from "./Header";
 parcelHelpers.export(exports, "Main", ()=>(0, _mainDefault.default));
 parcelHelpers.export(exports, "Nav", ()=>(0, _navDefault.default));
 var _footer = require("./Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
-var _header = require("./Header");
-var _headerDefault = parcelHelpers.interopDefault(_header);
 var _main = require("./Main");
 var _mainDefault = parcelHelpers.interopDefault(_main);
 var _nav = require("./Nav");
 var _navDefault = parcelHelpers.interopDefault(_nav);
 
-},{"./Footer":"gIRCJ","./Header":"kKyxu","./Main":"fq5nN","./Nav":"2qGmX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gIRCJ":[function(require,module,exports) {
+},{"./Footer":"gIRCJ","./Main":"fq5nN","./Nav":"2qGmX","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gIRCJ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _htmlLiteral = require("html-literal");
 var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
 exports.default = ()=>(0, _htmlLiteralDefault.default)`
-  <footer>
-    &copy; 2020 <a href="https://savvycoders.com/">Savvy Coders</a>
-  </footer>
+   <footer>
+<p>&copy; 2023 Perpetua</p>
+</footer>
 `;
 
 },{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"amMXC":[function(require,module,exports) {
@@ -880,18 +878,7 @@ module.exports = (str)=>{
     return indent > 0 ? str.replace(re, "") : str;
 };
 
-},{}],"kKyxu":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _htmlLiteral = require("html-literal");
-var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
-exports.default = (state)=>(0, _htmlLiteralDefault.default)`
-  <header>
-    <h1>${state.header}</h1>
-  </header>
-`;
-
-},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fq5nN":[function(require,module,exports) {
+},{}],"fq5nN":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _htmlLiteral = require("html-literal");
@@ -904,66 +891,74 @@ exports.default = (state)=>(0, _htmlLiteralDefault.default)`
 },{"html-literal":"amMXC","./views":"ajVfi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ajVfi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Bio", ()=>(0, _bioDefault.default));
+parcelHelpers.export(exports, "About", ()=>(0, _aboutDefault.default));
 parcelHelpers.export(exports, "Home", ()=>(0, _homeDefault.default));
-parcelHelpers.export(exports, "Order", ()=>(0, _orderDefault.default));
-parcelHelpers.export(exports, "Pizza", ()=>(0, _pizzaDefault.default));
+parcelHelpers.export(exports, "Contact", ()=>(0, _contactDefault.default));
+parcelHelpers.export(exports, "Habits", ()=>(0, _habitsDefault.default));
 parcelHelpers.export(exports, "Viewnotfound", ()=>(0, _viewnotfoundDefault.default));
-var _bio = require("./Bio");
-var _bioDefault = parcelHelpers.interopDefault(_bio);
+var _about = require("./About");
+var _aboutDefault = parcelHelpers.interopDefault(_about);
 var _home = require("./Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
-var _order = require("./Order");
-var _orderDefault = parcelHelpers.interopDefault(_order);
-var _pizza = require("./Pizza");
-var _pizzaDefault = parcelHelpers.interopDefault(_pizza);
+var _contact = require("./Contact");
+var _contactDefault = parcelHelpers.interopDefault(_contact);
+var _habits = require("./Habits");
+var _habitsDefault = parcelHelpers.interopDefault(_habits);
 var _viewnotfound = require("../Viewnotfound");
 var _viewnotfoundDefault = parcelHelpers.interopDefault(_viewnotfound);
 
-},{"./Bio":"9atF3","./Home":"d9WBP","./Order":"c8GIx","./Pizza":"7JQPt","../Viewnotfound":"iDrEG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9atF3":[function(require,module,exports) {
+},{"./Home":"d9WBP","../Viewnotfound":"iDrEG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./About":"4FEBc","./Contact":"Fyyq5","./Habits":"1jUPz"}],"d9WBP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _htmlLiteral = require("html-literal");
 var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
-var _dogWithFlowerJpg = require("../../assets/img/dog-with-flower.jpg");
-var _dogWithFlowerJpgDefault = parcelHelpers.interopDefault(_dogWithFlowerJpg);
-exports.default = ()=>(0, _htmlLiteralDefault.default)`
-  <section id="bio">
-    <h2>Vivamus ac justo eu nisi</h2>
-    <img src="${0, _dogWithFlowerJpgDefault.default}" alt="me" />
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sagittis
-      nulla. Etiam semper mauris a quam tempus, non feugiat massa posuere. Morbi
-      vitae nisi aliquam, semper diam id, molestie leo. In hac habitasse platea
-      dictumst. Nulla et enim vel elit dictum viverra. Nunc pharetra lacinia
-      arcu sit amet dignissim. Pellentesque ut mi nulla.
-    </p>
-    <p>
-      Quisque at hendrerit libero, eget interdum lectus. Etiam facilisis leo
-      nulla, sit amet imperdiet nunc molestie vel. Orci varius natoque penatibus
-      et magnis dis parturient montes, nascetur ridiculus mus. Curabitur
-      consectetur felis a purus volutpat, sed finibus magna iaculis.
-      Pellentesque tristique tristique turpis nec vehicula. Maecenas varius quis
-      tellus id mollis. Vivamus ut ultrices ligula.
-    </p>
-    <p>
-      Etiam egestas consectetur gravida. Nulla mollis suscipit sapien sed
-      fermentum. Integer vitae eros a magna vulputate aliquam. Suspendisse sed
-      pulvinar augue, auctor mollis lectus. Class aptent taciti sociosqu ad
-      litora torquent per conubia nostra, per inceptos himenaeos. Duis eleifend
-      diam quis libero sollicitudin efficitur. Nullam sapien eros, tempor eget
-      vulputate ut, interdum vel orci. Donec sit amet tempor mi. Nam feugiat
-      cursus egestas. Suspendisse eget orci et ex mattis ornare tempor non
-      tellus. Suspendisse gravida neque in urna congue bibendum. Duis dui odio,
-      pharetra nec odio ac, ornare vulputate nibh.
-    </p>
+exports.default = (state)=>(0, _htmlLiteralDefault.default)`
+  <section id="jumbotron">
+    <h2>SavvyCoders JavaScript Fullstack Bootcamp</h2>
+    <a href="index.html">"Call to Action" "Button"</a>
   </section>
+     <!-- <main>-->
+<!--        <section id="home">-->
+<!--            <h2>Home</h2>-->
+<!--        </section>-->
+<!--        <section id="habits">-->
+<!--            <h2>Habits</h2>-->
+<!--        </section>-->
+<!--        <section id="stats">-->
+<!--            <h2>Stats</h2>-->
+<!--        </section>-->
+<!--        <section id="contact">-->
+<!--            <h2>Contact</h2>-->
+<!--        </section>-->
+<!--    </main> -->
+ 
 `;
 
-},{"html-literal":"amMXC","../../assets/img/dog-with-flower.jpg":"5UkaW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5UkaW":[function(require,module,exports) {
-module.exports = require("e7dfb9b5841b9011").getBundleURL("UckoE") + "dog-with-flower.f784c242.jpg" + "?" + Date.now();
+},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iDrEG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _htmlLiteral = require("html-literal");
+var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
+var _oops404Jpg = require("../assets/img/oops-404.jpg");
+var _oops404JpgDefault = parcelHelpers.interopDefault(_oops404Jpg);
+exports.default = ()=>(0, _htmlLiteralDefault.default)`
+  <div id="oops404">
+    <img src="${0, _oops404JpgDefault.default}" alt="View not found!" />
+    <div class="attribution">
+      <a
+        href="https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_13315300.htm"
+        target="_blank"
+        >Image by storyset</a
+      >
+      on Freepik
+    </div>
+  </div>
+`;
 
-},{"e7dfb9b5841b9011":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+},{"html-literal":"amMXC","../assets/img/oops-404.jpg":"jdM8l","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jdM8l":[function(require,module,exports) {
+module.exports = require("d6e4f875741eaa20").getBundleURL("UckoE") + "oops-404.1e5d8f24.jpg" + "?" + Date.now();
+
+},{"d6e4f875741eaa20":"lgJ39"}],"lgJ39":[function(require,module,exports) {
 "use strict";
 var bundleURL = {};
 function getBundleURLCached(id) {
@@ -998,157 +993,227 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"d9WBP":[function(require,module,exports) {
+},{}],"4FEBc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _htmlLiteral = require("html-literal");
 var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
-exports.default = (state)=>(0, _htmlLiteralDefault.default)`
-  <section id="jumbotron">
-    <h2>SavvyCoders JavaScript Fullstack Bootcamp</h2>
-    <a href="index.html">"Call to Action" "Button"</a>
-  </section>
- 
-`;
-
-},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"c8GIx":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _htmlLiteral = require("html-literal");
-var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
+//import dogPic from "../../assets/img/dog-with-flower.jpg";
 exports.default = ()=>(0, _htmlLiteralDefault.default)`
-  <section id="order">
-    <form id="order" method="POST" action="">
-      <h2>Order a pizza</h2>
-      <div>
-        <label for="crust">Crust:</label>
-        <select id="crust" name="crust">
-          <option value="">Select a Crust</option>
-          <option value="thin">Thin</option>
-          <option value="chicago">Chicago</option>
-          <option value="deep-dish">Deep Dish</option>
-          <option value="hella-thick">Hella Thick</option>
-        </select>
-      </div>
-      <div>
-        <label for="cheese">Cheese:</label>
-        <input
-          type="text"
-          name="cheese"
-          id="cheese"
-          placeholder="Enter Cheese"
-          required
+  <section id="about">
+    <div class="container">
+      <div class="box">
+        <h2>About Me</h2>
+        <img
+          class="img-about"
+          src="../assets/img/melissa-circle.png"
+          alt="photo of melissa"
         />
-      </div>
-      <div>
-        <label for="sauce">Sauce:</label>
-        <input
-          type="text"
-          name="sauce"
-          id="sauce"
-          placeholder="Enter Sauce"
-          required
-        />
-      </div>
-      <div>
-        <label for="toppings">Toppings:</label>
-        <input
-          type="checkbox"
-          id="id_of_checkbox1"
-          class="items1"
-          name="toppings"
-          value="Chicken"
-        />
-        <label for="top1">chicken</label>
-        <input
-          type="checkbox"
-          id="id_of_checkbox2"
-          class="items1"
-          name="toppings"
-          value="onion"
-        />
-        <label for="top2">onion</label>
-        <input
-          type="checkbox"
-          id="id_of_checkbox3"
-          class="items1"
-          name="toppings"
-          value="spinach"
-        />
-        <label for="top3">spinach</label>
-        <input
-          type="checkbox"
-          id="id_of_checkbox4"
-          class="items1"
-          name="toppings"
-          value="Extra cheese"
-        />
-        <label for="top4">extra cheese</label>
-        <input
-          type="checkbox"
-          id="id_of_checkbox5"
-          class="items1"
-          name="toppings"
-          value="red pepper"
-        />
-        <label for="top5">red pepper</label>
-      </div>
-      <input
-        type="hidden"
-        name="customer"
-        id="customer"
-        value="Anonymous Customer"
-      />
-      <input type="submit" name="submit" value="Submit Pizza" />
-    </form>
-  </section>
-`;
+        <p>
+          As a passionate and dedicated Full Stack Developer at Sketch
+          Development Services, I specialize in creating innovative software
+          solutions. Currently, I am contributing to development in Time Front,
+          a key project utilizing technologies such as MongoDB, Vue, TypeScript,
+          Playwright, and JavaScript. My role in this Agile environment involves
+          not only coding but also contributing to the continuous improvement of
+          our software, ensuring both efficiency and user satisfaction.
+        </p>
 
-},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7JQPt":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _htmlLiteral = require("html-literal");
-var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
-exports.default = (state)=>(0, _htmlLiteralDefault.default)`
-  <table id="pizzas">
-    <tr>
-      <th>Crust</th>
-      <th>Cheese</th>
-      <th>Sauce</th>
-      <th>Toppings</th>
-      <th>Customer</th>
-    </tr>
-    ${state.pizzas.map((pizza)=>{
-        return `<tr><td>${pizza.crust}</td><td>${pizza.cheese}</td><td>${pizza.sauce}</td><td>${pizza.toppings.join(" & ")}</td><td>${pizza.customer}</td></tr>`;
-    }).join("")}
-  </table>
-`;
+        <p>
+          At Murray State University, where I earned a bachelor's degree in
+          Music Education with a minor in Computer Science, I laid the
+          foundation of my technical expertise. Beyond practical programming in
+          Java, JavaScript, and C++, my studies delved into essential computer
+          science concepts such as Object-Oriented Programming, Algorithms, and
+          Data Structures. This rigorous academic training honed my analytical
+          skills and provided a strong theoretical understanding that underpins
+          my practical work.
+        </p>
 
-},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iDrEG":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _htmlLiteral = require("html-literal");
-var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
-var _oops404Jpg = require("../assets/img/oops-404.jpg");
-var _oops404JpgDefault = parcelHelpers.interopDefault(_oops404Jpg);
-exports.default = ()=>(0, _htmlLiteralDefault.default)`
-  <div id="oops404">
-    <img src="${0, _oops404JpgDefault.default}" alt="View not found!" />
-    <div class="attribution">
-      <a
-        href="https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_13315300.htm"
-        target="_blank"
-        >Image by storyset</a
-      >
-      on Freepik
+        <p>
+          I am committed to continuous learning and currently enhancing my skill
+          set through the Savvy Coders' Full Stack Web Development course. Here,
+          I am gaining hands-on experience in building advanced web applications
+          using Node.js and JavaScript, further broadening my expertise in the
+          field.
+        </p>
+
+        <p>
+          I am keen on exploring new opportunities in technology that challenge
+          me and allow me to contribute to innovative solutions. Let’s connect
+          to discuss how we can collaborate to drive technological advancement
+          and innovation!
+        </p>
+      </div>
+
+      <div class="box">
+        <h2>About Perpetua</h2>
+        <img
+          class="img-habit"
+          src="../assets/img/Perpetua Logo.png"
+          alt="Perpetua Logo"
+        />
+        <p>
+          Perpetua is a dynamic web application designed to provide users with a
+          platform to create, monitor, and maintain their daily habits. This
+          interactive, user-friendly interface is the result of a capstone
+          project integrating HTML, CSS, and JavaScript.
+        </p>
+
+        <p>
+          Key features include habit creation, an interactive dashboard, habit
+          tracking, a responsive design, progress analytics, custom reminders,
+          and a user-friendly interface. Data persistence is achieved through
+          JavaScript's local storage, ensuring tracking continues seamlessly.
+        </p>
+
+        <p>
+          This project serves as a testament to the power of web development
+          technologies in creating practical, user-centric applications. It
+          demonstrates proficiency in front-end development, emphasizing design
+          thinking and user experience.
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
 `;
 
-},{"html-literal":"amMXC","../assets/img/oops-404.jpg":"jdM8l","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jdM8l":[function(require,module,exports) {
-module.exports = require("d6e4f875741eaa20").getBundleURL("UckoE") + "oops-404.1e5d8f24.jpg" + "?" + Date.now();
+},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Fyyq5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _htmlLiteral = require("html-literal");
+var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
+exports.default = ()=>(0, _htmlLiteralDefault.default)`
+  <section id="contact">
+      <div class="container">
+          <!-- <h1>Contact</h1> -->
+          <h2>How can I help you?</h2>
+          <form class="form" action="https://formspree.io/f/myyqrbne" method="POST">
+              <div class="flex-row">
+                  <div class="input-group">
+                      <label for="firstName">First Name <span class="required">*</span></label>
+                      <input type="text" id="firstName" name="firstName" required>
+                  </div>
+                  <div class="input-group">
+                      <label for="lastName">Last Name <span class="required">*</span></label>
+                      <input type="text" id="lastName" name="lastName" required>
+                  </div>
+              </div>
+              <div class="input-group">
+                  <label for="email">Email <span class="required">*</span></label>
+                  <input type="text" id="email" name="email" required>
+              </div>
+              <div class="input-group">
+                  <label for="phone">Phone</label>
+                  <input type="text" id="phone" name="phone">
+              </div>
+              <div class="textarea-group">
+                  <label for="message">Message</span></label>
+                  <textarea id="message" name="message" required></textarea>
+              </div>
+              <div class="submit-group">
+                  <button type="submit" id="submit" name="submit">Submit</button>
+              </div>
+          </form>
+          <div class="connect-box">
+              <h2>Get in Contact</h2>
+              <div class="connect-column">
+                  <h3>Connect</h3>
+                  <div class="logos-container">
+                      <div class="logo-group">
+                          <i class="fa-brands fa-linkedin"></i>
+                          <a href="https://www.linkedin.com/in/melissa-atkins03/" target="_blank" class="logo-link">
+                              <span>LinkedIn</span>
+                          </a>
+                      </div>
+                      <div class="logo-group">
+                          <i class="fa-brands fa-github"></i>
+                          <a href="https://github.com/classicatkins" target="_blank" class="logo-link">
+                              <span>GitHub</span>
+                          </a>
+                      </div>
+                      <div class="logo-group">
+                          <i class="fa-solid fa-globe"></i>
+                          <a href="https://www.linkedin.com/in/melissa-atkins03/" target="_blank" class="logo-link">
+                              <span>Website</span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+              <div class="contact-column">
+                  <h3>Contact</h3>
+                  <p>matkins@duck.com</p>
+              </div>
+          </div>
+      </div>
+  </section>
+`;
 
-},{"d6e4f875741eaa20":"lgJ39"}],"2qGmX":[function(require,module,exports) {
+},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1jUPz":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _htmlLiteral = require("html-literal");
+var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
+exports.default = ()=>(0, _htmlLiteralDefault.default)`
+  <section id="habits">
+    <div class="shared-board">
+      <!-- Column 1: Categories -->
+      <div class="shared-column">
+        <div class="column-banner">
+          <!-- Banner -->
+          <div class="column-title">Habits</div>
+        </div>
+        <div class="add-container">
+          <div class="add-label">Add Habit</div>
+          <button class="circle-button">+</button>
+        </div>
+        <div class="shared-column-cards">
+          <div class="habit-card">Individual Habit</div>
+          <div class="habit-card">Individual Habit</div>
+          <div class="habit-card">Habit</div>
+          <!-- More cards... -->
+        </div>
+      </div>
+
+      <div class="shared-column">
+        <div class="column-banner">
+          <!-- Banner -->
+          <div class="column-title">Habits</div>
+        </div>
+        <div class="add-container">
+          <div class="add-label">Add Habit</div>
+          <button class="circle-button">+</button>
+        </div>
+        <div class="shared-column-cards">
+          <div class="habit-card">Individual Habit</div>
+          <div class="habit-card">Individual Habit</div>
+          <div class="habit-card">Habit</div>
+          <!-- More cards... -->
+        </div>
+      </div>
+
+      <!-- Column 3: Routines -->
+      <div class="shared-column">
+        <div class="column-banner">
+          <!-- Banner -->
+          <div class="column-title">Routines</div>
+        </div>
+        <div class="add-container">
+          <div class="add-label">Add Habit</div>
+          <button class="circle-button">+</button>
+        </div>
+        <div class="shared-column-cards">
+          <div class="habit-card">Individual Habit</div>
+          <div class="habit-card">Individual Habit</div>
+          <div class="habit-card">Habit</div>
+          <!-- More cards... -->
+        </div>
+      </div>
+    </div>
+  </section>
+`;
+
+},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2qGmX":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _htmlLiteral = require("html-literal");
@@ -1165,56 +1230,31 @@ exports.default = (links)=>(0, _htmlLiteralDefault.default)`
 },{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"71t6G":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Bio", ()=>(0, _bioDefault.default));
+parcelHelpers.export(exports, "About", ()=>(0, _aboutDefault.default));
 parcelHelpers.export(exports, "Home", ()=>(0, _homeDefault.default));
-parcelHelpers.export(exports, "Order", ()=>(0, _orderDefault.default));
-parcelHelpers.export(exports, "Pizza", ()=>(0, _pizzaDefault.default));
+parcelHelpers.export(exports, "Contact", ()=>(0, _contactDefault.default));
+parcelHelpers.export(exports, "Habits", ()=>(0, _habitsDefault.default));
 parcelHelpers.export(exports, "Viewnotfound", ()=>(0, _viewnotfoundDefault.default));
 parcelHelpers.export(exports, "Links", ()=>(0, _linksDefault.default));
-var _bio = require("./Bio");
-var _bioDefault = parcelHelpers.interopDefault(_bio);
+var _about = require("./About");
+var _aboutDefault = parcelHelpers.interopDefault(_about);
 var _home = require("./Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
-var _order = require("./Order");
-var _orderDefault = parcelHelpers.interopDefault(_order);
-var _pizza = require("./Pizza");
-var _pizzaDefault = parcelHelpers.interopDefault(_pizza);
+var _contact = require("./Contact");
+var _contactDefault = parcelHelpers.interopDefault(_contact);
+var _habits = require("./Habits");
+var _habitsDefault = parcelHelpers.interopDefault(_habits);
 var _viewnotfound = require("./Viewnotfound");
 var _viewnotfoundDefault = parcelHelpers.interopDefault(_viewnotfound);
 var _links = require("./Links");
 var _linksDefault = parcelHelpers.interopDefault(_links);
 
-},{"./Bio":"8Ak7g","./Home":"60R7n","./Order":"hHtWn","./Pizza":"4bRf5","./Viewnotfound":"cSOMF","./Links":"jDBjl","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8Ak7g":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = {
-    header: "My Bio Page",
-    view: "Bio"
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"60R7n":[function(require,module,exports) {
+},{"./Home":"60R7n","./Viewnotfound":"cSOMF","./Links":"jDBjl","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./About":"3OUOl","./Contact":"hWwek","./Habits":"ihjeP"}],"60R7n":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 exports.default = {
     header: "My Home Page",
     view: "Home"
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hHtWn":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = {
-    header: "My Order Page",
-    view: "Order"
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4bRf5":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = {
-    header: "My Pizza Page",
-    view: "Pizza",
-    pizzas: []
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cSOMF":[function(require,module,exports) {
@@ -1234,18 +1274,42 @@ exports.default = [
         text: "Home"
     },
     {
-        title: "Bio",
-        text: "Bio"
+        title: "About",
+        text: "About"
     },
     {
-        title: "Order",
-        text: "Submit a Pizza Order"
+        title: "Contact",
+        text: "Contact"
     },
     {
-        title: "Pizza",
-        text: "See all the Pizzas"
+        title: "Habits",
+        text: "Habits"
     }
 ];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3OUOl":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+    header: "My About Page",
+    view: "About"
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hWwek":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+    header: "My Contact Page",
+    view: "Contact"
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ihjeP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+    header: "My Habits Page",
+    view: "Habits"
+};
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fuSlc":[function(require,module,exports) {
 !function(t, n) {
