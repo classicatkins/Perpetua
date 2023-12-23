@@ -195,6 +195,10 @@ nav > .fa-bars {
     padding-right: 2rem;
   }
 
+  nav > .fa-gear {
+    display: none;
+  }
+
   .dropdown > a .fa-bars {
       display: block;
       text-align: right;
@@ -241,6 +245,10 @@ nav > .fa-bars {
 
 .show {
   display: block;
+}
+
+.left {
+  text-align: left;
 }
 
 
@@ -318,8 +326,12 @@ footer {
 }
 
 /* stats.css */
-.container {
+.stats-container {
   display: flex;
+}
+
+.favicon {
+  height: 1.25rem;
 }
 
 .grid {
