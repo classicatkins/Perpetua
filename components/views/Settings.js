@@ -69,5 +69,8 @@ export default () => html`
             alert('Settings saved!');
         });
     </script>
+    <br>
+    <br>
+    <br>
 </body>
 `;
