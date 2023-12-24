@@ -190,7 +190,7 @@ footer {
   text-align: center;
   background-color: #220c0c;
   width: 100%;
-  padding: 10px 0;
+  padding: 5px 0;
   font-family: Quicksand, sans-serif;
   position: fixed;
   bottom: 0;
@@ -735,10 +735,6 @@ button:hover {
 
 h2 {
   color: #333;
-}
-
-p {
-  color: #666;
 }
 
 .img-about {

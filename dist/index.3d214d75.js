@@ -1315,6 +1315,9 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
             alert('Settings saved!');
         });
     </script>
+    <br>
+    <br>
+    <br>
 </body>
 `;
 
