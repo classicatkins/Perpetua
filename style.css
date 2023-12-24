@@ -167,8 +167,14 @@ text-align: center;
   vertical-align: top;
 }
 
+.nav-left li {
+   padding: 0rem;
+   /* margin: .2rem; */
+}
+
 .nav-left img {
-   padding-bottom: 0.1rem;
+  padding-bottom: 0.1rem;
+  margin-left: 1rem;
 }
 
 .nav-right {

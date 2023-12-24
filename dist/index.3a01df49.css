@@ -135,8 +135,13 @@ header {
   display: inline-block;
 }
 
+.nav-left li {
+  padding: 0;
+}
+
 .nav-left img {
-  padding-bottom: .2rem;
+  margin-left: 1rem;
+  padding-bottom: .1rem;
 }
 
 .nav-right {
