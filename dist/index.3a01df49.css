@@ -121,8 +121,22 @@ header {
   height: 1rem;
 }
 
+.nav-inline {
+  display: inline-block;
+}
+
 .nav-left {
   text-align: left;
+  display: inline-block;
+}
+
+.nav-left img, .nav-left li {
+  vertical-align: top;
+  display: inline-block;
+}
+
+.nav-left img {
+  padding-bottom: .2rem;
 }
 
 .nav-right {
@@ -558,7 +572,7 @@ body {
   color: red;
 }
 
-body {
+.body-today {
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -566,6 +580,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Quicksand, sans-serif;
+  display: flex;
 }
 
 .flex-row {

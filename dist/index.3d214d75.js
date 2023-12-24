@@ -1369,7 +1369,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _htmlLiteral = require("html-literal");
 var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
 exports.default = ()=>(0, _htmlLiteralDefault.default)`
-<body class="theme--default">
+<body class="body-today">
   <div class="flex-row">
     <div class="flex-box">
       <p>function to calculate time + name</p>
@@ -1560,10 +1560,16 @@ var _faviconSvg = require("../assets/img/favicon.svg");
 var _faviconSvgDefault = parcelHelpers.interopDefault(_faviconSvg);
 exports.default = (links)=>(0, _htmlLiteralDefault.default)`
   <nav>
-    <ul class="nav-left">
-    <img src="${0, _faviconSvgDefault.default}" alt="Favicon" class="favicon">
-    <li class="nav-perpetua"><a href="/Home" title="Home" data-navigo>Perpetua</a></li>
-    </ul>
+    <div class="nav-inline">
+      <ul class="nav-left">
+      <img src="${0, _faviconSvgDefault.default}" alt="Favicon" class="favicon">
+      <!-- <li class="nav-perpetua"><a href="/Home" title="Home" data-navigo>Perpetua</a></li> -->
+      </ul>
+      <ul class="nav-left">
+      <!-- <img src="${0, _faviconSvgDefault.default}" alt="Favicon" class="favicon"> -->
+      <li class="nav-perpetua"><a href="/Home" title="Home" data-navigo>Perpetua</a></li>
+      </ul>
+    </div>
     <div class="nav-right">
     <ul>
     <i class="fas fa-bars"></i>
