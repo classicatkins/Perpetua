@@ -3,10 +3,16 @@ import favicon from "../assets/img/favicon.svg";
 
 export default links => html`
   <nav>
-    <ul class="nav-left">
-    <img src="${favicon}" alt="Favicon" class="favicon">
-    <li class="nav-perpetua"><a href="/Home" title="Home" data-navigo>Perpetua</a></li>
-    </ul>
+    <div class="nav-inline">
+      <ul class="nav-left">
+      <img src="${favicon}" alt="Favicon" class="favicon">
+      <!-- <li class="nav-perpetua"><a href="/Home" title="Home" data-navigo>Perpetua</a></li> -->
+      </ul>
+      <ul class="nav-left">
+      <!-- <img src="${favicon}" alt="Favicon" class="favicon"> -->
+      <li class="nav-perpetua"><a href="/Home" title="Home" data-navigo>Perpetua</a></li>
+      </ul>
+    </div>
     <div class="nav-right">
     <ul>
     <i class="fas fa-bars"></i>

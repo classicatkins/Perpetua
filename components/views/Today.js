@@ -1,7 +1,7 @@
 import html from "html-literal";
 
 export default () => html`
-<body class="theme--default">
+<body class="body-today">
   <div class="flex-row">
     <div class="flex-box">
       <p>function to calculate time + name</p>
