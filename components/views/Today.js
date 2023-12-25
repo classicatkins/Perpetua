@@ -1,6 +1,8 @@
 import html from "html-literal";
 
 export default () => html`
+ "scripts": [ "/script.js"
+        ]
 <body class="body-today">
   <div class="flex-row">
     <div class="flex-box">
@@ -133,6 +135,7 @@ export default () => html`
     </div>
     <script>
       document.querySelectorAll('.circle-card').forEach(card => {
+        alert('here');
           card.addEventListener('click', () => {
               card.classList.toggle('active');
           });

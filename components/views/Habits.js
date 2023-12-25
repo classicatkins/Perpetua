@@ -17,8 +17,8 @@ export default () => html`
            
 
         <div class="habit-card">
-    <input type="checkbox" class="check-box" name="habits">
     <div class="card-content">
+    <input type="checkbox" class="check-box" name="habits">
       Habit 3
       <div class="menu-icon">
         <!-- Three dots icon or font-awesome icon -->

@@ -7,7 +7,7 @@ export default () => html`
   <section id="about">
     <div class="container">
       <div class="box">
-        <h2>About Me</h2>
+        <h2 class="center">About Me</h2>
         <img
           class="img-about"
           src="${melissa}"
@@ -51,7 +51,7 @@ export default () => html`
       </div>
 
       <div class="box">
-        <h2>About Perpetua</h2>
+        <h2 class="center">About Perpetua</h2>
         <img
           class="img-habit"
           src="${logo}"

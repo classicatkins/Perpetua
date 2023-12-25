@@ -919,99 +919,7 @@ var _todayDefault = parcelHelpers.interopDefault(_today);
 var _viewnotfound = require("../Viewnotfound");
 var _viewnotfoundDefault = parcelHelpers.interopDefault(_viewnotfound);
 
-},{"./Home":"d9WBP","../Viewnotfound":"iDrEG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./About":"4FEBc","./Contact":"Fyyq5","./Habits":"1jUPz","./Settings":"BSnCp","./Stats":"fSOl2","./Today":"h2Hj8"}],"d9WBP":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _htmlLiteral = require("html-literal");
-var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
-exports.default = (state)=>(0, _htmlLiteralDefault.default)`
-  <section id="jumbotron">
-    <h2>SavvyCoders JavaScript Fullstack Bootcamp</h2>
-    <a href="index.html">"Call to Action" "Button"</a>
-
-    <button id="createUserButton">Create User</button>
-    <button id="createGraphButton">Create Graph</button>
-    <button id="recordPixelButton">Record Pixel</button>
-    <button id="updatePixelButton">Update Pixel</button>
-    <button id="deletePixelButton">Delete Pixel</button>
-  </section>
-     <!-- <main>-->
-<!--        <section id="home">-->
-<!--            <h2>Home</h2>-->
-<!--        </section>-->
-<!--        <section id="habits">-->
-<!--            <h2>Habits</h2>-->
-<!--        </section>-->
-<!--        <section id="stats">-->
-<!--            <h2>Stats</h2>-->
-<!--        </section>-->
-<!--        <section id="contact">-->
-<!--            <h2>Contact</h2>-->
-<!--        </section>-->
-<!--    </main> -->
- 
-`;
-
-},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iDrEG":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _htmlLiteral = require("html-literal");
-var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
-var _oops404Jpg = require("../assets/img/oops-404.jpg");
-var _oops404JpgDefault = parcelHelpers.interopDefault(_oops404Jpg);
-exports.default = ()=>(0, _htmlLiteralDefault.default)`
-  <div id="oops404">
-    <img src="${0, _oops404JpgDefault.default}" alt="View not found!" />
-    <div class="attribution">
-      <a
-        href="https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_13315300.htm"
-        target="_blank"
-        >Image by storyset</a
-      >
-      on Freepik
-    </div>
-  </div>
-`;
-
-},{"html-literal":"amMXC","../assets/img/oops-404.jpg":"jdM8l","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jdM8l":[function(require,module,exports) {
-module.exports = require("d6e4f875741eaa20").getBundleURL("UckoE") + "oops-404.1e5d8f24.jpg" + "?" + Date.now();
-
-},{"d6e4f875741eaa20":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"4FEBc":[function(require,module,exports) {
+},{"./About":"4FEBc","./Home":"d9WBP","./Contact":"Fyyq5","./Habits":"1jUPz","./Settings":"BSnCp","./Stats":"fSOl2","./Today":"h2Hj8","../Viewnotfound":"iDrEG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4FEBc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _htmlLiteral = require("html-literal");
@@ -1025,7 +933,7 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
   <section id="about">
     <div class="container">
       <div class="box">
-        <h2>About Me</h2>
+        <h2 class="center">About Me</h2>
         <img
           class="img-about"
           src="${0, _melissaCirclePngDefault.default}"
@@ -1069,7 +977,7 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
       </div>
 
       <div class="box">
-        <h2>About Perpetua</h2>
+        <h2 class="center">About Perpetua</h2>
         <img
           class="img-habit"
           src="${0, _perpetuaLogoPngDefault.default}"
@@ -1100,24 +1008,127 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
   </section>
 `;
 
-},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../../assets/img/melissa-circle.png":"g7IOF","../../assets/img/Perpetua Logo.png":"lN7X1"}],"g7IOF":[function(require,module,exports) {
+},{"html-literal":"amMXC","../../assets/img/melissa-circle.png":"g7IOF","../../assets/img/Perpetua Logo.png":"lN7X1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g7IOF":[function(require,module,exports) {
 module.exports = require("da4ec1b344248ef6").getBundleURL("UckoE") + "melissa-circle.0a61f46c.png" + "?" + Date.now();
 
-},{"da4ec1b344248ef6":"lgJ39"}],"lN7X1":[function(require,module,exports) {
+},{"da4ec1b344248ef6":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"lN7X1":[function(require,module,exports) {
 module.exports = require("50e71fbbe2ca505c").getBundleURL("UckoE") + "Perpetua Logo.9ad38d8d.png" + "?" + Date.now();
 
-},{"50e71fbbe2ca505c":"lgJ39"}],"Fyyq5":[function(require,module,exports) {
+},{"50e71fbbe2ca505c":"lgJ39"}],"d9WBP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _htmlLiteral = require("html-literal");
+var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
+exports.default = (state)=>(0, _htmlLiteralDefault.default)`
+  <section id="jumbotron">
+    <h2>SavvyCoders JavaScript Fullstack Bootcamp</h2>
+    <a href="index.html">"Call to Action" "Button"</a>
+
+    <button id="createUserButton">Create User</button>
+    <button id="createGraphButton">Create Graph</button>
+    <button id="recordPixelButton">Record Pixel</button>
+    <button id="updatePixelButton">Update Pixel</button>
+    <button id="deletePixelButton">Delete Pixel</button>
+  </section>
+     <!-- <main>-->
+<!--        <section id="home">-->
+<!--            <h2>Home</h2>-->
+<!--        </section>-->
+<!--        <section id="habits">-->
+<!--            <h2>Habits</h2>-->
+<!--        </section>-->
+<!--        <section id="stats">-->
+<!--            <h2>Stats</h2>-->
+<!--        </section>-->
+<!--        <section id="contact">-->
+<!--            <h2>Contact</h2>-->
+<!--        </section>-->
+<!--    </main> -->
+ 
+`;
+
+},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"Fyyq5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _htmlLiteral = require("html-literal");
 var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
 exports.default = ()=>(0, _htmlLiteralDefault.default)`
   <section id="contact">
+  <div class="container">
+  <h2 class="center">How can I help you?</h2>
+        <form class="form" action="https://formspree.io/f/myyqrbne" method="POST">
+
+            <div class="section">
+                <div class="contact-container">
+                <div class="contact">
+                    <label for="firstName">First Name<span class="required">*</span></label>
+                    <input class="contact-names" type="text" id="firstName" name="firstName">
+                </div>
+                <div class="contact">
+                  <label for="lastName">Last Name<span class="required">*</span></label>
+                  <input class="contact-names" type="text" id="lastName" name="lastName">
+                </div>
+                </div>
+                <div class="contact">
+                    <label for="email">Email<span class="required">*</span></label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="contact">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input type="text" id="phoneNumber" name="phoneNumber">
+                </div>
+                <div class="contact">
+                    <label for="email">Message<span class="required">*</span></label>
+                    <input class="contact-message" type="message" id="message" name="message">
+                </div>
+                <div class="submit-group">
+                  <button type="submit" id="submit" name="submit">Submit</button>
+              </div>
+            </div>
+
+        </form>
+    </div>
+
       <div class="container">
           <!-- <h1>Contact</h1> -->
-          <h2>How can I help you?</h2>
+          <h2 class="center">How can I help you?</h2>
           <form class="form" action="https://formspree.io/f/myyqrbne" method="POST">
-              <div class="flex-row">
+              <div class="flex-row-names">
                   <div class="input-group">
                       <label for="firstName">First Name <span class="required">*</span></label>
                       <input type="text" id="firstName" name="firstName" required>
@@ -1136,7 +1147,7 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
                   <input type="text" id="phone" name="phone">
               </div>
               <div class="textarea-group">
-                  <label for="message">Message</span></label>
+                  <label for="message">Message<span class="required">*</span></span></label>
                   <textarea id="message" name="message" required></textarea>
               </div>
               <div class="submit-group">
@@ -1174,6 +1185,8 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
               </div>
           </div>
       </div>
+      <br>
+      <br>
   </section>
 `;
 
@@ -1199,8 +1212,8 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
            
 
         <div class="habit-card">
-    <input type="checkbox" class="check-box" name="habits">
     <div class="card-content">
+    <input type="checkbox" class="check-box" name="habits">
       Habit 3
       <div class="menu-icon">
         <!-- Three dots icon or font-awesome icon -->
@@ -1410,6 +1423,8 @@ parcelHelpers.defineInteropFlag(exports);
 var _htmlLiteral = require("html-literal");
 var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
 exports.default = ()=>(0, _htmlLiteralDefault.default)`
+ "scripts": [ "/script.js"
+        ]
 <body class="body-today">
   <div class="flex-row">
     <div class="flex-box">
@@ -1542,6 +1557,7 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
     </div>
     <script>
       document.querySelectorAll('.circle-card').forEach(card => {
+        alert('here');
           card.addEventListener('click', () => {
               card.classList.toggle('active');
           });
@@ -1592,7 +1608,31 @@ updateCalendar();
 </body>
 `;
 
-},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2qGmX":[function(require,module,exports) {
+},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iDrEG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _htmlLiteral = require("html-literal");
+var _htmlLiteralDefault = parcelHelpers.interopDefault(_htmlLiteral);
+var _oops404Jpg = require("../assets/img/oops-404.jpg");
+var _oops404JpgDefault = parcelHelpers.interopDefault(_oops404Jpg);
+exports.default = ()=>(0, _htmlLiteralDefault.default)`
+  <div id="oops404">
+    <img src="${0, _oops404JpgDefault.default}" alt="View not found!" />
+    <div class="attribution">
+      <a
+        href="https://www.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_13315300.htm"
+        target="_blank"
+        >Image by storyset</a
+      >
+      on Freepik
+    </div>
+  </div>
+`;
+
+},{"html-literal":"amMXC","../assets/img/oops-404.jpg":"jdM8l","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jdM8l":[function(require,module,exports) {
+module.exports = require("d6e4f875741eaa20").getBundleURL("UckoE") + "oops-404.1e5d8f24.jpg" + "?" + Date.now();
+
+},{"d6e4f875741eaa20":"lgJ39"}],"2qGmX":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _htmlLiteral = require("html-literal");
@@ -1625,7 +1665,7 @@ exports.default = (links)=>(0, _htmlLiteralDefault.default)`
   </nav>
 `;
 
-},{"html-literal":"amMXC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","../assets/img/favicon.svg":"cxWmi"}],"cxWmi":[function(require,module,exports) {
+},{"html-literal":"amMXC","../assets/img/favicon.svg":"cxWmi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cxWmi":[function(require,module,exports) {
 module.exports = require("8f225a36c42463eb").getBundleURL("UckoE") + "favicon.0e5b1046.svg" + "?" + Date.now();
 
 },{"8f225a36c42463eb":"lgJ39"}],"71t6G":[function(require,module,exports) {
@@ -1659,12 +1699,60 @@ var _viewnotfoundDefault = parcelHelpers.interopDefault(_viewnotfound);
 var _links = require("./Links");
 var _linksDefault = parcelHelpers.interopDefault(_links);
 
-},{"./Home":"60R7n","./Viewnotfound":"cSOMF","./Links":"jDBjl","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./About":"3OUOl","./Contact":"hWwek","./Habits":"ihjeP","./Settings":"eqSye","./Stats":"3bAKh","./Today":"EBkkQ"}],"60R7n":[function(require,module,exports) {
+},{"./About":"3OUOl","./Settings":"eqSye","./Today":"EBkkQ","./Stats":"3bAKh","./Home":"60R7n","./Contact":"hWwek","./Habits":"ihjeP","./Viewnotfound":"cSOMF","./Links":"jDBjl","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3OUOl":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+    header: "My About Page",
+    view: "About"
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eqSye":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+    header: "My Settings Page",
+    view: "Settings"
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"EBkkQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+    header: "Today",
+    view: "Today"
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3bAKh":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+    header: "My Stats Page",
+    view: "Stats"
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"60R7n":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 exports.default = {
     header: "My Home Page",
     view: "Home"
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hWwek":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+    header: "My Contact Page",
+    view: "Contact"
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ihjeP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+    header: "My Habits Page",
+    view: "Habits"
 };
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cSOMF":[function(require,module,exports) {
@@ -1704,54 +1792,6 @@ exports.default = [
         text: "Settings"
     }
 ];
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3OUOl":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = {
-    header: "My About Page",
-    view: "About"
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hWwek":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = {
-    header: "My Contact Page",
-    view: "Contact"
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ihjeP":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = {
-    header: "My Habits Page",
-    view: "Habits"
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eqSye":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = {
-    header: "My Settings Page",
-    view: "Settings"
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3bAKh":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = {
-    header: "My Stats Page",
-    view: "Stats"
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"EBkkQ":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = {
-    header: "Today",
-    view: "Today"
-};
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fuSlc":[function(require,module,exports) {
 !function(t, n) {
