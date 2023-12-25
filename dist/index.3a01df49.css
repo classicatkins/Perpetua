@@ -104,7 +104,7 @@ body, h1, h2, ul, p {
 body {
   color: #333;
   background-color: #f4f4f4;
-  font-family: Arial, sans-serif;
+  font-family: Quicksand, sans-serif;
   line-height: 1.6;
 }
 
@@ -365,6 +365,81 @@ footer {
   background-color: #007bff;
 }
 
+.habit-card {
+  cursor: pointer;
+  z-index: 0;
+  text-align: center;
+  border: 1px solid #0000;
+  border-radius: 8px;
+  outline: none;
+  width: 40%;
+  max-width: 250px;
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  font-family: Quicksand, sans-serif;
+  font-size: .9em;
+  transition: transform .3s, box-shadow .3s, z-index .3s;
+  position: relative;
+  box-shadow: 0 0 0 1px #0f0f0f1a, 0 2px 4px #0f0f0f1a;
+}
+
+.card-content {
+  align-items: center;
+  display: flex;
+}
+
+.menu-icon {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.popup-menu {
+  background-color: #fff;
+  padding: 10px;
+  display: none;
+  position: absolute;
+  box-shadow: 0 0 5px #0000004d;
+}
+
+.popup-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.popup-menu li {
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.popup-menu.active {
+  display: block;
+}
+
+.add-container {
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  padding-top: .5rem;
+  padding-right: .5rem;
+  display: flex;
+}
+
+.circle-button {
+  color: #ff5757;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ff5757;
+  border-radius: 50%;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-family: Quicksand, sans-serif;
+  font-size: 16px;
+  display: inline-flex;
+}
+
 .flex-row {
   flex-wrap: wrap;
   justify-content: space-between;
@@ -517,6 +592,7 @@ body {
   max-width: 250px;
   margin-bottom: 10px;
   padding: 12px 20px;
+  font-family: Quicksand, sans-serif;
   font-size: .9em;
   transition: transform .3s, box-shadow .3s, z-index .3s;
   display: block;
@@ -554,8 +630,8 @@ body {
   outline: none;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 27px;
+  height: 27px;
   padding: 0;
   font-size: 16px;
   display: inline-flex;

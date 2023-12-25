@@ -1196,9 +1196,32 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
           <button class="circle-button">+</button>
         </div>
         <div class="shared-column-cards">
+           
+
+        <div class="habit-card">
+    <input type="checkbox" class="check-box" name="habits">
+    <div class="card-content">
+      Habit 3
+      <div class="menu-icon">
+        <!-- Three dots icon or font-awesome icon -->
+        &nbsp;&nbsp;&#8942;
+      </div>
+    </div>
+    <div class="popup-menu">
+      <ul>
+        <li>Action 1</li>
+        <li>Action 2</li>
+        <li>Action 3</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
           <div class="habit-card">Individual Habit</div>
-          <div class="habit-card">Individual Habit</div>
-          <div class="habit-card">Habit</div>
+          <div class="habit-card">Habit </div>
           <!-- More cards... -->
         </div>
       </div>
@@ -1238,6 +1261,21 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
         </div>
       </div>
     </div>
+    <script>
+    function toggleMenu(icon) {
+  const popupMenu = icon.nextElementSibling;
+  popupMenu.classList.toggle("active");
+}
+
+document.addEventListener("click", function(event) {
+  if (!event.target.classList.contains("menu-icon")) {
+    const popupMenus = document.querySelectorAll(".popup-menu.active");
+    for (const menu of popupMenus) {
+      menu.classList.remove("active");
+    }
+  }
+});
+    </script>
   </section>
 `;
 
@@ -1339,9 +1377,9 @@ exports.default = ()=>(0, _htmlLiteralDefault.default)`
           <div class="header-container">
             <h3>Graphs</h3>
           <ul>
-              <li>Menu Item 1.1</li>
-              <li>Menu Item 1.2</li>
-              <li>Menu Item 1.3</li>
+              <li><input type="checkbox" class="check-box" name="habits"> Menu Item 1.1</li>
+              <li><input type="checkbox" class="check-box" name="habits">Menu Item 1.2</li>
+              <li><input type="checkbox" class="check-box" name="habits">Menu Item 1.3</li>
           </ul>
           </div>
           <div class="header-container">

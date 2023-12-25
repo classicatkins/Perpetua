@@ -13,9 +13,9 @@ export default () => html`
           <div class="header-container">
             <h3>Graphs</h3>
           <ul>
-              <li>Menu Item 1.1</li>
-              <li>Menu Item 1.2</li>
-              <li>Menu Item 1.3</li>
+              <li><input type="checkbox" class="check-box" name="habits"> Menu Item 1.1</li>
+              <li><input type="checkbox" class="check-box" name="habits">Menu Item 1.2</li>
+              <li><input type="checkbox" class="check-box" name="habits">Menu Item 1.3</li>
           </ul>
           </div>
           <div class="header-container">
