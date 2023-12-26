@@ -864,7 +864,23 @@ transform: scale(1.05);
   text-align: left;
 }
 
-input, textarea {
+/* input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+} */
+
+.names {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box
+}
+
+textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;

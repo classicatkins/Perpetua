@@ -748,7 +748,7 @@ body {
   display: block;
 }
 
-input, textarea {
+.names, textarea {
   box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 4px;

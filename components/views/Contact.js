@@ -1,40 +1,6 @@
 import html from "html-literal";
 export default () => html`
   <section id="contact">
-  <div class="container">
-  <h2 class="center">How can I help you?</h2>
-        <form class="form" action="https://formspree.io/f/myyqrbne" method="POST">
-
-            <div class="section">
-                <div class="contact-container">
-                <div class="contact">
-                    <label for="firstName">First Name<span class="required">*</span></label>
-                    <input class="contact-names" type="text" id="firstName" name="firstName">
-                </div>
-                <div class="contact">
-                  <label for="lastName">Last Name<span class="required">*</span></label>
-                  <input class="contact-names" type="text" id="lastName" name="lastName">
-                </div>
-                </div>
-                <div class="contact">
-                    <label for="email">Email<span class="required">*</span></label>
-                    <input type="email" id="email" name="email">
-                </div>
-                <div class="contact">
-                  <label for="phoneNumber">Phone Number</label>
-                  <input type="text" id="phoneNumber" name="phoneNumber">
-                </div>
-                <div class="contact">
-                    <label for="email">Message<span class="required">*</span></label>
-                    <input class="contact-message" type="message" id="message" name="message">
-                </div>
-                <div class="submit-group">
-                  <button type="submit" id="submit" name="submit">Submit</button>
-              </div>
-            </div>
-
-        </form>
-    </div>
 
       <div class="container">
           <!-- <h1>Contact</h1> -->
@@ -43,20 +9,20 @@ export default () => html`
               <div class="flex-row-names">
                   <div class="input-group">
                       <label for="firstName">First Name <span class="required">*</span></label>
-                      <input type="text" id="firstName" name="firstName" required>
+                      <input class="names" type="text" id="firstName" name="firstName" required>
                   </div>
                   <div class="input-group">
                       <label for="lastName">Last Name <span class="required">*</span></label>
-                      <input type="text" id="lastName" name="lastName" required>
+                      <input class="names" type="text" id="lastName" name="lastName" required>
                   </div>
               </div>
               <div class="input-group">
                   <label for="email">Email <span class="required">*</span></label>
-                  <input type="text" id="email" name="email" required>
+                  <input class="names" type="text" id="email" name="email" required>
               </div>
               <div class="input-group">
                   <label for="phone">Phone</label>
-                  <input type="text" id="phone" name="phone">
+                  <input class="names" type="text" id="phone" name="phone">
               </div>
               <div class="textarea-group">
                   <label for="message">Message<span class="required">*</span></span></label>

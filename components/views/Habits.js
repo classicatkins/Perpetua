@@ -19,7 +19,7 @@ export default () => html`
         <div class="habit-card">
     <div class="card-content">
     <input type="checkbox" class="check-box" name="habits">
-      Habit 3
+    &nbsp&nbspHabit 3
       <div class="menu-icon">
         <!-- Three dots icon or font-awesome icon -->
         &nbsp;&nbsp;&#8942;
