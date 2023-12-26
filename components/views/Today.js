@@ -1,8 +1,7 @@
 import html from "html-literal";
 
 export default () => html`
- "scripts": [ "/script.js"
-        ]
+<script type="text/javascript" src="script.js"></script>
 <body class="body-today">
   <div class="flex-row">
     <div class="flex-box">
